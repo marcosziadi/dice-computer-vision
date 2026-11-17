@@ -22,7 +22,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-import tp3_cinco_dados as tp
+import trabajo_practico as tp
 
 MARGEN = 80      # margen (px) alrededor de los dados para recortar las imágenes
 
