@@ -341,14 +341,14 @@ def procesar_video(path_in, path_out):
 
 
 def main(carpeta):
-    rutas = glob.glob(os.path.join(carpeta, "/videos_input/tirada_*.mp4"))
+    rutas = glob.glob(os.path.join(carpeta, "videos_input/tirada_*.mp4"))
     rutas.sort(key=lambda p: int(re.findall(r"\d+", os.path.basename(p))[-1]))
     if not rutas:
         print(f"No se encontraron videos tirada_*.mp4 en {carpeta}")
         return
     for ruta in rutas:
         nombre = os.path.splitext(os.path.basename(ruta))[0]
-        procesar_video(ruta, os.path.join(carpeta, f"/videos_output/resultado_{nombre}.mp4"))
+        procesar_video(ruta, os.path.join(carpeta, f"videos_output/resultado_{nombre}.mp4"))
 
 
 if __name__ == "__main__":

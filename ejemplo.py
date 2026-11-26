@@ -30,7 +30,7 @@ MARGEN = 80      # margen (px) alrededor de los dados para recortar las imágene
 def elegir_video():
     carpeta = os.path.dirname(os.path.abspath(__file__))
     arg = sys.argv[1] if len(sys.argv) > 1 else "1"
-    return arg if os.path.isfile(arg) else os.path.join(carpeta, f"tirada_{arg}.mp4")
+    return arg if os.path.isfile(arg) else os.path.join(carpeta, f"videos_input/tirada_{arg}.mp4")
 
 
 def rgb(img_bgr):
